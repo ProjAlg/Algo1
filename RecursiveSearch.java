@@ -56,7 +56,7 @@ public class RecursiveSearch {
 
         int middleIndex = (firstIndex + lastIndex) / 2;
         if ( a[middleIndex] == target ) {
-            System.out.println("match found");
+            //System.out.println("match found");
             return middleIndex;
         }
 

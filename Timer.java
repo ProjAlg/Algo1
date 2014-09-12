@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * Created by caynan on 9/6/14.
  */
@@ -19,6 +21,9 @@ public class Timer {
 
         // CREATE CSV AND PUT VALUES THERE
 
+        System.out.println("Sequential times: " + Arrays.toString(sequentialTimes));
+        System.out.println("Jump times: " + Arrays.toString(jumpTimes));
+        System.out.println("Recursive times: " + Arrays.toString(recursiveTimes));
     }
 
     private static long[] sequentialSearchExperiment (int val[], int LOOP) {
@@ -26,10 +31,11 @@ public class Timer {
         ArrayGenerator gen = new ArrayGenerator();
         long startTime = 0, endTime = 0;
         long[] times = new long[6];
+        int[] A;
 
-        for (int j = 1; j <= 6; j++) {
+        for (int j = 1; j <= 5; j++) {
             // Create Array of size 2^5j
-            int[] A = gen.arrayGen((int) Math.pow(2, 5 * j));
+            A = gen.arrayGen((int) Math.pow(2, 5 * j));
 
             startTime = System.nanoTime();
             for (int i = 0; i < LOOP; i++) {
@@ -47,11 +53,11 @@ public class Timer {
         ArrayGenerator gen = new ArrayGenerator();
         long startTime = 0, endTime = 0;
         long[] times = new long[6];
+        int[] A;
 
-
-        for (int j = 1; j <= 6; j++) {
+        for (int j = 1; j <= 5; j++) {
             // Create Array of size 2^5j
-            int[] A = gen.arrayGen((int) Math.pow(2, 5 * j));
+            A = gen.arrayGen((int) Math.pow(2, 5 * j));
 
             startTime = System.nanoTime();
             for (int i = 0; i < LOOP; i++) {
@@ -70,11 +76,11 @@ public class Timer {
         ArrayGenerator gen = new ArrayGenerator();
         long startTime = 0, endTime = 0;
         long[] times = new long[6];
+        int[] A;
 
-
-        for (int j = 1; j <= 6; j++) {
+        for (int j = 1; j <= 5; j++) {
             // Create Array of size 2^5j
-            int[] A = gen.arrayGen((int) Math.pow(2, 5 * j));
+            A = gen.arrayGen((int) Math.pow(2, 5 * j));
 
             //Note to Cay, I've configured this execution with 4 partitions.
             startTime = System.nanoTime();

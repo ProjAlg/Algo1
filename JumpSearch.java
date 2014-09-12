@@ -94,11 +94,11 @@ public class JumpSearch {
 
         }
 
-        //Prints index. Comment out as needed.
-        if (found == true) {
-            System.out.println("Value " + value + " found at index: " + index_found);
-        } else
-            System.out.println("Last index checked. Value " + value + " not found.");
+//        //Prints index. Comment out as needed.
+//        if (found == true) {
+//            System.out.println("Value " + value + " found at index: " + index_found);
+//        } else
+//            System.out.println("Last index checked. Value " + value + " not found.");
 
         return found;
 
@@ -137,13 +137,13 @@ public class JumpSearch {
                 found = true;
 
                 //Turn off at implementation final
-                System.out.println("Value found!");
+                //System.out.println("Value found!");
 
                 //If above check fails, checks if last failed check
                 //was the last index of array. Prevents out of bound error.
             } else if ((partition_integer_array.length - 1) == index) {
                 //Turn off at implementation is final.
-                System.out.println("Last index checked. Value not found.");
+                //System.out.println("Last index checked. Value not found.");
                 index = -1;
 
             } else

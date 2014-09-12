@@ -76,9 +76,10 @@ public class Timer {
             // Create Array of size 2^5j
             int[] A = gen.arrayGen((int) Math.pow(2, 5 * j));
 
+            //Note to Cay, I've configured this execution with 4 partitions.
             startTime = System.nanoTime();
             for (int i = 0; i < LOOP; i++) {
-                recursiveSearch.search(val[i]);
+                recursiveSearch.searchWithMultiplePartitions(A, val[i], 4);
             }
             endTime = System.nanoTime();
             // save total time of the experiment into times array
